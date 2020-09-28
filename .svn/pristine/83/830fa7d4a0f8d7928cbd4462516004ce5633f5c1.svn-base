@@ -1,0 +1,385 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "pnlinstitucion",
+        "designer|userClassName": "pnlInstitucion",
+        "layout": "fit",
+        "title": "Instituciones"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string"
+    },
+    "name": "MyPanel9",
+    "designerId": "91209516-ec65-4ec9-afcc-8ace073209d3",
+    "viewControllerInstanceId": "a21f320f-86ea-4d8b-bc34-9c158486820e",
+    "viewModelInstanceId": "c59b663e-998a-4317-a542-5a84c97b4a29",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "MyToolbar",
+            "designerId": "23f4f9f9-a718-4cc8-8586-c3fee19791e5",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "x-fa fa-plus",
+                        "id": "btnNuevoIns",
+                        "layout|flex": null,
+                        "text": "Nuevo"
+                    },
+                    "configAlternates": {
+                        "iconAlign": "string",
+                        "iconCls": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "id": "string"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "50dac57f-f7ef-40ef-ae8b-9996146144fd",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnNuevoInsClick",
+                                "implHandler": [
+                                    "var win = Ext.create('plasma.view.wndInstitucion');",
+                                    "win.show();",
+                                    "Ext.getCmp('cbEstadoI').setValue(1);"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "name": "string",
+                                "scope": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "onBtnNuevoInsClick",
+                            "designerId": "3b50eca4-bc8a-4763-b766-6f0a24040c28"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "iconCls": "x-fa fa-trash",
+                        "id": "btnEliminarIns",
+                        "layout|flex": null,
+                        "text": "Eliminar"
+                    },
+                    "configAlternates": {
+                        "iconAlign": "string",
+                        "iconCls": "string",
+                        "id": "string",
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton8",
+                    "designerId": "bb730364-033d-43f1-88f4-6ad85c9de557",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnEliminarInsClick",
+                                "implHandler": [
+                                    "//Elimina el registro seleccionado verificando el id",
+                                    "var g = Ext.getCmp('grdInstitucion');",
+                                    "var arrayKeys = g.getSelectionModel().selected.items;",
+                                    "var indice = g.getSelectionModel().selectionStartIdx;",
+                                    "",
+                                    "if(arrayKeys.length === 0)",
+                                    "    Ext.Msg.alert('Error', 'Debe escoger un usuario');",
+                                    "else",
+                                    "{",
+                                    "    var store = g.getStore();",
+                                    "    var rec = g.selection;",
+                                    "    //Se comprueba que el registro selecciionado no tenga datos asociados antes de eliminarlo",
+                                    "    Ext.Ajax.request({",
+                                    "        url: '../servidor/plasma/institucion/verificar',",
+                                    "        method:\"post\",",
+                                    "        params: {",
+                                    "            id: rec.data.id",
+                                    "        },",
+                                    "        success: function( result, request ) {",
+                                    "            var responseData = Ext.JSON.decode(result.responseText);",
+                                    "            if(responseData.success)",
+                                    "            {",
+                                    "",
+                                    "                store.remove(rec);",
+                                    "                store.sync(",
+                                    "                    {",
+                                    "                        params:{",
+                                    "                            id: rec.data.id",
+                                    "                        },",
+                                    "                        success: function(batch, success)",
+                                    "                        {",
+                                    "                            store.commitChanges();",
+                                    "                            store.load();",
+                                    "                            Ext.Msg.alert('Alerta', 'Se ha eliminado el registro exitosamente');",
+                                    "                        },",
+                                    "",
+                                    "                        failure: function(batch, success)",
+                                    "                        {",
+                                    "                            Ext.Msg.alert('Error', 'Hubor un error');",
+                                    "                        }",
+                                    "                    });",
+                                    "            }",
+                                    "            else",
+                                    "            {",
+                                    "                Ext.Msg.alert('Alerta','Este registro tiene datos asociados.');",
+                                    "            }",
+                                    "        },",
+                                    "",
+                                    "        failure: function(response, opts) {",
+                                    "            console.log('server-side failure with status code ' + response.status);",
+                                    "        }",
+                                    "    });",
+                                    "",
+                                    "",
+                                    "}",
+                                    "",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnEliminarInsClick",
+                            "designerId": "2576e79b-567c-4ca0-b31f-38dc2bfd717f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "forceFit": true,
+                "id": "grdInstitucion",
+                "store": "Institucion",
+                "title": ""
+            },
+            "configAlternates": {
+                "forceFit": "boolean",
+                "id": "string",
+                "title": "string",
+                "store": "store"
+            },
+            "name": "MyGridPanel",
+            "designerId": "c33bbd8b-18b6-4650-9d16-57fcf71d18bf",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable",
+                    "designerId": "fa45f528-c35d-4e2d-92db-92da62c69400"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nombre",
+                        "text": "Nombre"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "6d061ced-bea3-4414-b814-1bfa704fc6f1",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField2",
+                            "designerId": "1b4af610-df91-4a33-8d98-646496d9ea20"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "codigo",
+                        "hidden": true,
+                        "text": "Codigo"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "hidden": "boolean"
+                    },
+                    "name": "MyColumn3",
+                    "designerId": "d9299418-f352-487e-b5a9-2e2aaf3359b6"
+                },
+                {
+                    "type": "Ext.grid.column.Check",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "estado",
+                        "disabled": true,
+                        "text": "Estado"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "disabled": "boolean"
+                    },
+                    "name": "MyCheck",
+                    "designerId": "d94a118b-2e6c-4d02-bdc6-e0aae4f35392",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyCheckbox",
+                            "designerId": "7688ea17-1b94-4e92-a7e2-103fe3f10107"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.plugin.RowEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowEditingPlugin",
+                    "designerId": "26e18dc4-17df-44d9-90bf-7ea2eafc533f",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRowEditingEdit",
+                                "implHandler": [
+                                    "//Actualiza los nuevos datos ingresados del registro seleccionado verificando su id",
+                                    "var me = this;",
+                                    "var store = Ext.getCmp('grdInstitucion').getStore();",
+                                    "var g = Ext.getCmp('grdInstitucion');",
+                                    "var reco = g.selection;",
+                                    "var id = reco.data.id;",
+                                    "var arrayKeys = g.getSelectionModel().selected.items;",
+                                    "//Si se modificó los datos del registro seleccionado",
+                                    "if (context.record.modified)",
+                                    "{",
+                                    "    var reco = context.record;",
+                                    "    store.add(reco);",
+                                    "    store.sync(",
+                                    "        {",
+                                    "            params:{",
+                                    "                id: id,",
+                                    "                data: arrayKeys[0]",
+                                    "            },",
+                                    "            success: function(batch, success)",
+                                    "            {",
+                                    "                store.commitChanges();",
+                                    "                Ext.Msg.alert('Datos Guardados', 'Los datos se han guardado con éxito');",
+                                    "                store.removeAll();",
+                                    "                store.load();",
+                                    "            },",
+                                    "",
+                                    "            failure: function(batch, success)",
+                                    "            {",
+                                    "                Ext.Msg.alert('Error', 'Hubor un error');",
+                                    "            }",
+                                    "        });",
+                                    "}"
+                                ],
+                                "name": "edit",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onRowEditingEdit",
+                            "designerId": "8e8ecd6e-bdc7-441f-b17a-85b0a7d15dfb"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

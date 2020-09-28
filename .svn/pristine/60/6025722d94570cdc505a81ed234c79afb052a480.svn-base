@@ -1,0 +1,299 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "wndcasa",
+        "designer|userClassName": "wndCasa",
+        "height": 250,
+        "id": "wndCasa",
+        "layout": "center",
+        "title": "Casa Comercial",
+        "width": 357
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "18c15c85-b0f9-4d36-b0b7-e3d4f155d991",
+    "viewControllerInstanceId": "3dca4acc-23b3-4f17-8746-96abe5563f68",
+    "viewModelInstanceId": "7c8a485f-6fcc-479a-b8a1-1cd7d0dccb5c",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "id": "frmNuevoCasa",
+                "title": ""
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "id": "string",
+                "title": "string"
+            },
+            "name": "MyForm8",
+            "designerId": "bfde8563-9d5b-4bdb-b654-66ae1ad639bb",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Nombre",
+                        "id": "txtNombreCa",
+                        "layout|anchor": "100%",
+                        "name": "nombre"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextField21",
+                    "designerId": "918deb8b-e9aa-428b-9220-631839376085"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "descripcion",
+                        "editable": false,
+                        "fieldLabel": "Estado",
+                        "id": "cbEstadoCa",
+                        "layout|anchor": "100%",
+                        "name": "estado",
+                        "queryMode": "local",
+                        "store": "Estado",
+                        "valueField": "id"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield"
+                    },
+                    "name": "MyComboBox17",
+                    "designerId": "ac129132-e738-43aa-b8d5-96858a65b83c"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar14",
+                    "designerId": "d79d4046-93c1-4937-8b0f-07844fe5b250",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill13",
+                            "designerId": "9fce83a2-c0a1-4683-80a8-f259d621094c"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnCrearCasa",
+                                "layout|flex": null,
+                                "text": "Crear"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton30",
+                            "designerId": "5a7ec749-5052-4875-95ad-e42ae151e374",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnCrearCasaClick",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "var forma = Ext.getCmp('frmNuevoCasa').getForm(),",
+                                            "    store = Ext.getStore('Casa');",
+                                            "if (forma.isValid()) {",
+                                            "    var values = forma.getValues();",
+                                            "    Ext.Ajax.request({",
+                                            "        url: '../servidor/plasma/casacomercial/create',",
+                                            "        method:\"post\",",
+                                            "        params: {",
+                                            "            data: Ext.encode(values)",
+                                            "        },",
+                                            "        success: function( result, request ) {",
+                                            "            var responseData = Ext.JSON.decode(result.responseText);",
+                                            "            if(responseData.success)",
+                                            "            {",
+                                            "",
+                                            "                    Ext.Msg.alert('Aviso','Se ha ingresado la información');",
+                                            "                    Ext.getCmp('txtNombreCa').setValue(null);",
+                                            "                    Ext.getCmp('cbEstadoCa').setValue(null);",
+                                            "",
+                                            "                    Ext.getCmp('txtNombreCa').reset();",
+                                            "                    Ext.getCmp('cbEstadoCa').reset();",
+                                            "",
+                                            "                    store.load();",
+                                            "                    Ext.getCmp('wndCasa').close();",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "            }",
+                                            "            else",
+                                            "            {",
+                                            "                Ext.Msg.alert('Alerta','Faltan datos');",
+                                            "            }",
+                                            "        },",
+                                            "",
+                                            "        failure: function(response, opts) {",
+                                            "            console.log('server-side failure with status code ' + response.status);",
+                                            "        }",
+                                            "    });",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    Ext.Msg.alert('Atención','Los datos son incorrectos o se encuentran incompletos');",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnCrearCasaClick",
+                                    "designerId": "bc1401ac-9449-45f3-991b-9220244b7545"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnAtrasC",
+                                "layout|flex": null,
+                                "text": "Atrás"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton31",
+                            "designerId": "ebd06238-e6ca-466c-b60b-892797c5c65f",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAtrasCClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('wndCasa').close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnAtrasCClick",
+                                    "designerId": "e188316c-6ea1-4db9-8d11-59acbaf1870c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill14",
+                            "designerId": "49a01acd-2bf2-4a4b-8873-2e1554cdcfe5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

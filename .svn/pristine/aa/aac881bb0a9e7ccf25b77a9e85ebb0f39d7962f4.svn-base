@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Muestra",
+        "model": "Muestra_Model",
+        "pageSize": 10,
+        "remoteFilter": true,
+        "storeId": "Muestra"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "pageSize": "number",
+        "remoteFilter": "boolean"
+    },
+    "name": "MyStore",
+    "designerId": "73b1efbe-98c0-466c-bade-94f4e59a797f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"create\":\"POST\",\"read\":\"POST\",\"update\":\"POST\",\"destroy\":\"POST\"}"
+                ],
+                "api": [
+                    "{create: '../servidor/plasma/muestra/create',",
+                    "                    read: '../servidor/plasma/muestra/get',",
+                    "                    update: '../servidor/plasma/muestra/update',",
+                    "                    destroy: '../servidor/plasma/muestra/delete'}"
+                ]
+            },
+            "configAlternates": {
+                "actionMethods": "object",
+                "api": "object"
+            },
+            "name": "MyAjaxProxy8",
+            "designerId": "ddfc4fcc-4077-4811-b2fa-8c20ac68501f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data",
+                        "totalProperty": "cantidad"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string",
+                        "totalProperty": "string"
+                    },
+                    "name": "MyJsonReader7",
+                    "designerId": "6da2e7f0-7b50-407c-bb21-30dd1d4657aa"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonWriter7",
+                    "designerId": "799c76f1-12c1-4a9d-9b9d-ad1f095642b2"
+                }
+            ]
+        }
+    ]
+}

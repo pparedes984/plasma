@@ -1,0 +1,320 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "wndmarcador",
+        "designer|userClassName": "wndMarcador",
+        "height": 250,
+        "id": "wndMarcador",
+        "layout": "center",
+        "modal": true,
+        "title": "Marcador Serológico",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "c8be9a08-40df-437e-893d-e542a2209cec",
+    "viewControllerInstanceId": "fa02804c-0e42-489e-9536-bab240ee6254",
+    "viewModelInstanceId": "f476f098-9edf-4d97-8188-372db158b1a3",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "id": "frmNuevoMar",
+                "title": ""
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "id": "string",
+                "title": "string"
+            },
+            "name": "MyForm3",
+            "designerId": "1dd31725-8ac1-4cab-b6aa-1feb8b053481",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Nombre",
+                        "id": "txtNombreM",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "nombre"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyTextField15",
+                    "designerId": "adc3932e-5e70-4801-9ee5-70147887bb99"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "descripcion",
+                        "editable": false,
+                        "fieldLabel": "Estado",
+                        "id": "cbEstadoM",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "estado",
+                        "queryMode": "local",
+                        "store": "Estado",
+                        "valueField": "id"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyComboBox5",
+                    "designerId": "9ab870b0-d947-4875-9bb9-6050e8726d98"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar8",
+                    "designerId": "a3dde7aa-c128-4140-9b39-85c2b363efcc",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill4",
+                            "designerId": "40bfaa7c-4342-436f-9b9d-24fcd93fb04a"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnCrearMar",
+                                "layout|flex": null,
+                                "text": "Crear"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton17",
+                            "designerId": "f9793a48-52ca-451e-b84f-510a0350719a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnCrearMarClick",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "var forma = Ext.getCmp('frmNuevoMar').getForm(),",
+                                            "    store = Ext.getStore('Marcador');",
+                                            "if (forma.isValid()) {",
+                                            "    Ext.Ajax.request({",
+                                            "        url: '../servidor/plasma/marcador/verificamarcador',",
+                                            "        method:\"post\",",
+                                            "        params: {",
+                                            "            nombre: Ext.getCmp('txtNombreM').getValue()",
+                                            "",
+                                            "        },",
+                                            "        success: function( result, request ) {",
+                                            "            var responseData = Ext.JSON.decode(result.responseText);",
+                                            "            if(responseData.success){",
+                                            "",
+                                            "                var values = forma.getValues();",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: '../servidor/plasma/marcador/create',",
+                                            "                    method:\"post\",",
+                                            "                    params: {",
+                                            "                        data: Ext.encode(values)",
+                                            "                    },",
+                                            "                    success: function( result, request ) {",
+                                            "                        var responseData = Ext.JSON.decode(result.responseText);",
+                                            "                        if(responseData.success)",
+                                            "                        {",
+                                            "",
+                                            "                            Ext.Msg.alert('Aviso','Se ha ingresado la información');",
+                                            "                            Ext.getCmp('txtNombreM').setValue(null);",
+                                            "                            Ext.getCmp('cbEstadoM').setValue(null);",
+                                            "",
+                                            "                            Ext.getCmp('txtNombreM').reset();",
+                                            "                            Ext.getCmp('cbEstadoM').reset();",
+                                            "",
+                                            "                            store.load();",
+                                            "                            Ext.getCmp('wndMarcador').close();",
+                                            "",
+                                            "                        }",
+                                            "                        else",
+                                            "                        {",
+                                            "                            Ext.Msg.alert('Alerta','Faltan datos');",
+                                            "                        }",
+                                            "                    },",
+                                            "",
+                                            "                    failure: function(response, opts) {",
+                                            "                        console.log('server-side failure with status code ' + response.status);",
+                                            "                    }",
+                                            "                });",
+                                            "            }",
+                                            "            else{",
+                                            "                Ext.Msg.alert('Atención','El marcador ya existe');",
+                                            "            }",
+                                            "        }",
+                                            "    });",
+                                            "",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    Ext.Msg.alert('Atención','Los datos son incorrectos o se encuentran incompletos');",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnCrearMarClick",
+                                    "designerId": "4c7cfc8e-8f51-4efd-a43c-0c4e29998971"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnRegresarMar",
+                                "layout|flex": null,
+                                "text": "Atrás"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton18",
+                            "designerId": "e2e03ebe-c474-4bf3-bdfc-faed76926ae0",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnRegresarMarClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('wndMarcador').close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnRegresarMarClick",
+                                    "designerId": "c3d30594-aae8-4dce-ac88-7e60307b42fa"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill5",
+                            "designerId": "2730735e-50fc-4778-bc86-4d564ee9a3f8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

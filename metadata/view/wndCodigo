@@ -1,0 +1,305 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "wndcodigo",
+        "designer|userClassName": "wndCodigo",
+        "height": 250,
+        "id": "wndCodigo",
+        "layout": "center",
+        "modal": true,
+        "title": "Códigos de Mapa de Trabajo de Serología",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "fafd3c67-036e-4905-9a7b-ca6abc875d3b",
+    "viewControllerInstanceId": "235bca8d-777f-46f2-b2c7-7cd51b3d7088",
+    "viewModelInstanceId": "5f56b1b5-1963-4258-8486-fe139b62e0bf",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "id": "frmNuevoCod",
+                "title": ""
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "id": "string",
+                "title": "string"
+            },
+            "name": "MyForm5",
+            "designerId": "1f928afc-0866-4bcc-a267-464389359a6b",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Nombre",
+                        "id": "txtNombreC",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "nombre"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyTextField17",
+                    "designerId": "cfa59e0c-635f-4243-bae4-b377cb2e8d1f"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "descripcion",
+                        "editable": false,
+                        "fieldLabel": "Estado",
+                        "id": "cbEstadoC",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "estado",
+                        "queryMode": "local",
+                        "store": "Estado",
+                        "valueField": "id"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyComboBox8",
+                    "designerId": "7c45b609-7a04-4e52-9282-8d333fa673b2"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar10",
+                    "designerId": "c305b07e-74ce-421b-a5a1-7f1615d1b47a",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill8",
+                            "designerId": "a5dc1d6c-c155-4320-a9e3-d0ca1456e123"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnCrearCod",
+                                "layout|flex": null,
+                                "text": "Crear"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton21",
+                            "designerId": "ec0930ca-0519-47b1-bfd9-a133abe908a2",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnCrearCodClick",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "var forma = Ext.getCmp('frmNuevoCod').getForm(),",
+                                            "    store = Ext.getStore('Codigo');",
+                                            "if (forma.isValid()) {",
+                                            "    var values = forma.getValues();",
+                                            "    Ext.Ajax.request({",
+                                            "        url: '../servidor/plasma/codigomapa/create',",
+                                            "        method:\"post\",",
+                                            "        params: {",
+                                            "            data: Ext.encode(values)",
+                                            "        },",
+                                            "        success: function( result, request ) {",
+                                            "            var responseData = Ext.JSON.decode(result.responseText);",
+                                            "            if(responseData.success)",
+                                            "            {",
+                                            "",
+                                            "                    Ext.Msg.alert('Aviso','Se ha ingresado la información');",
+                                            "                    Ext.getCmp('txtNombreC').setValue(null);",
+                                            "                    Ext.getCmp('cbEstadoC').setValue(null);",
+                                            "",
+                                            "                    Ext.getCmp('txtNombreC').reset();",
+                                            "                    Ext.getCmp('cbEstadoC').reset();",
+                                            "",
+                                            "                    store.load();",
+                                            "                    Ext.getCmp('wndCodigo').close();",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "            }",
+                                            "            else",
+                                            "            {",
+                                            "                Ext.Msg.alert('Alerta','Faltan datos');",
+                                            "            }",
+                                            "        },",
+                                            "",
+                                            "        failure: function(response, opts) {",
+                                            "            console.log('server-side failure with status code ' + response.status);",
+                                            "        }",
+                                            "    });",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    Ext.Msg.alert('Atención','Los datos son incorrectos o se encuentran incompletos');",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnCrearCodClick",
+                                    "designerId": "93ac9e32-7fff-4ca1-8a11-d4bbda845a72"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnRegresarCod",
+                                "layout|flex": null,
+                                "text": "Atrás"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton22",
+                            "designerId": "785f1123-defe-4a1f-81d0-88652e3fc71f",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnRegresarCodClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('wndCodigo').close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnRegresarCodClick",
+                                    "designerId": "0c07ba42-1125-4cb2-b82b-09e5fa51a1b2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill9",
+                            "designerId": "5c8dd77e-138e-47ee-8fd8-461709867049"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

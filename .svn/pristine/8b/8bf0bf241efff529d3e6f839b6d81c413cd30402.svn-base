@@ -1,0 +1,399 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "wndinstitucion",
+        "designer|userClassName": "wndInstitucion",
+        "height": 250,
+        "id": "wndInstitucion",
+        "layout": "center",
+        "modal": true,
+        "title": "Institución",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "5108b7f6-b1ce-4103-a545-08158f98a8e3",
+    "viewControllerInstanceId": "684f4758-0ee2-4365-9be4-1b361bcbdb6e",
+    "viewModelInstanceId": "425fb18d-c7a4-4d5a-b47a-26ba880ac6b4",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "id": "frmNuevoIns",
+                "title": ""
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "id": "string",
+                "title": "string"
+            },
+            "name": "MyForm2",
+            "designerId": "25d9514d-677c-4e50-a273-9432e06614c6",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Nombre",
+                        "id": "txtNombreI",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "nombre"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyTextField13",
+                    "designerId": "e11eb698-e33e-48e7-b6db-3196436d28a3"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Código",
+                        "hidden": true,
+                        "id": "txtCodigoI",
+                        "layout|anchor": "100%",
+                        "name": "codigo"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "hidden": "boolean"
+                    },
+                    "name": "MyDisplayField1",
+                    "designerId": "a7045ca8-e1bc-4986-b386-f467e771ba1e",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTxtCodigoIAfterRender",
+                                "implHandler": [
+                                    "Ext.Ajax.request({",
+                                    "                url: '../servidor/plasma/institucion/getCodigo',",
+                                    "                method:\"post\",",
+                                    "                success: function( result, request ) {",
+                                    "                    var responseData = Ext.JSON.decode(result.responseText);",
+                                    "                    if(responseData.success)",
+                                    "                    {",
+                                    "                        Ext.getCmp('txtCodigoI').setValue(responseData.data[0].codigo);",
+                                    "                    }",
+                                    "                    else",
+                                    "                    {",
+                                    "                        Ext.Msg.alert('Alerta','Error');",
+                                    "                    }",
+                                    "                },",
+                                    "",
+                                    "                failure: function(response, opts) {",
+                                    "                    console.log('server-side failure with status code ' + response.status);",
+                                    "                }",
+                                    "            });"
+                                ],
+                                "name": "afterrender",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onTxtCodigoIAfterRender",
+                            "designerId": "3bc7af5e-4445-4edd-9f21-9cc8d5d6f71a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "descripcion",
+                        "editable": false,
+                        "fieldLabel": "Estado",
+                        "id": "cbEstadoI",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "estado",
+                        "queryMode": "local",
+                        "store": "Estado",
+                        "valueField": "id"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyComboBox4",
+                    "designerId": "ee705027-d371-41eb-a015-3f410d39bb74"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar7",
+                    "designerId": "e9eb0c5f-d957-4787-808a-d293c906529e",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill2",
+                            "designerId": "68f2586f-df7d-4adb-acd4-dd854d6add92"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnCrearIns",
+                                "layout|flex": null,
+                                "text": "Crear"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton15",
+                            "designerId": "893474a7-08d2-498d-b5d7-365f8fabb8ba",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnCrearInsClick",
+                                        "implHandler": [
+                                            "",
+                                            "var me = this;",
+                                            "var forma = Ext.getCmp('frmNuevoIns').getForm(),",
+                                            "    store = Ext.getStore('Institucion');",
+                                            "if (forma.isValid()) {",
+                                            "    Ext.Ajax.request({",
+                                            "        url: '../servidor/plasma/institucion/verificainstitucion',",
+                                            "        method:\"post\",",
+                                            "        params: {",
+                                            "            nombre: Ext.getCmp('txtNombreI').getValue()",
+                                            "",
+                                            "        },",
+                                            "        success: function( result, request ) {",
+                                            "            var responseData = Ext.JSON.decode(result.responseText);",
+                                            "            if(responseData.success){",
+                                            "                var values = forma.getValues();",
+                                            "                values.codigo = Ext.getCmp('txtCodigoI').getValue();",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: '../servidor/plasma/institucion/create',",
+                                            "                    method:\"post\",",
+                                            "                    params: {",
+                                            "                        data: Ext.encode(values)",
+                                            "                    },",
+                                            "                    success: function( result, request ) {",
+                                            "                        var responseData = Ext.JSON.decode(result.responseText);",
+                                            "                        if(responseData.success)",
+                                            "                        {",
+                                            "",
+                                            "                            Ext.Msg.alert('Aviso','Se ha ingresado la información');",
+                                            "                            Ext.getCmp('txtCodigoI').setValue(null);",
+                                            "                            Ext.getCmp('txtNombreI').setValue(null);",
+                                            "                            Ext.getCmp('cbEstadoI').setValue(null);",
+                                            "",
+                                            "",
+                                            "                            Ext.getCmp('txtCodigoI').reset();",
+                                            "                            Ext.getCmp('txtNombreI').reset();",
+                                            "                            Ext.getCmp('cbEstadoI').reset();",
+                                            "",
+                                            "                            store.load();",
+                                            "                            Ext.getCmp('wndInstitucion').close();",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "                        }",
+                                            "                        else",
+                                            "                        {",
+                                            "                            Ext.Msg.alert('Alerta','Faltan datos');",
+                                            "                        }",
+                                            "                    },",
+                                            "",
+                                            "                    failure: function(response, opts) {",
+                                            "                        console.log('server-side failure with status code ' + response.status);",
+                                            "                    }",
+                                            "                });",
+                                            "            }",
+                                            "            else{",
+                                            "                Ext.Msg.alert('Atención','La institución ya existe');",
+                                            "            }",
+                                            "        },",
+                                            "        failure: function(response, opts) {",
+                                            "            console.log('server-side failure with status code ' + response.status);",
+                                            "        }",
+                                            "    });",
+                                            "",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    Ext.Msg.alert('Atención','Los datos son incorrectos o se encuentran incompletos');",
+                                            "",
+                                            "}",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnCrearInsClick",
+                                    "designerId": "53cdfa8c-7c02-4cde-9f10-168c8a92ad93"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnRegresarIns",
+                                "layout|flex": null,
+                                "text": "Atrás"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton16",
+                            "designerId": "3120fcc1-9b5e-49d2-99a0-6ecdaf28741f",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnRegresarInsClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('wndInstitucion').close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnRegresarInsClick",
+                                    "designerId": "6fc6e9fa-f8db-4254-b4e9-77a8bc2143b5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill3",
+                            "designerId": "a4376f8a-da7c-4a3f-a1eb-34bb6f6dc649"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

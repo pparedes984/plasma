@@ -1,0 +1,359 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "wndkit",
+        "designer|userClassName": "wndKit",
+        "height": 264,
+        "id": "wndKit",
+        "layout": "center",
+        "title": "Kit de Reactivo",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "81fd5c00-03a5-47f4-9229-7d6042ae4663",
+    "viewControllerInstanceId": "95edbaff-9854-45a3-882e-7a244da8e87e",
+    "viewModelInstanceId": "7fe9a721-387d-4f1c-aa22-f91ede2be000",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "id": "frmNuevoKit",
+                "title": ""
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "id": "string",
+                "title": "string"
+            },
+            "name": "MyForm4",
+            "designerId": "a24464ef-1e0c-45ae-bd40-c30f2c8f6adf",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Nombre",
+                        "id": "txtNombreK",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "nombre"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyTextField16",
+                    "designerId": "8e2894d3-af5e-4b3d-b169-bd37becdd638"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "nombre",
+                        "editable": false,
+                        "fieldLabel": "Casa Comercial",
+                        "id": "cbCasaK",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "casa_comercial",
+                        "queryMode": "local",
+                        "store": "Casa",
+                        "valueField": "id"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyComboBox6",
+                    "designerId": "0c4af0cc-fcbd-4c56-aa36-8dd91d467a0e"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "descripcion",
+                        "editable": false,
+                        "fieldLabel": "Estado",
+                        "id": "cbEstadoK",
+                        "labelStyle": "font-weight:bold",
+                        "layout|anchor": "100%",
+                        "name": "estado",
+                        "queryMode": "local",
+                        "store": "Estado",
+                        "valueField": "id"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyComboBox7",
+                    "designerId": "0dd7c244-11bc-4956-9c7f-8476193c96d6"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar9",
+                    "designerId": "576c735d-a286-4dcd-9d46-c1e90bdef7e9",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill6",
+                            "designerId": "0c2d75a3-578b-4869-995a-afa56c78beba"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnCrearKit",
+                                "layout|flex": null,
+                                "text": "Crear"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton19",
+                            "designerId": "5f2b0dd1-0af3-419c-a81a-6d6d48c805f4",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnCrearKitClick",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "var forma = Ext.getCmp('frmNuevoKit').getForm(),",
+                                            "    store = Ext.getStore('Kit');",
+                                            "if (forma.isValid()) {",
+                                            "    Ext.Ajax.request({",
+                                            "        url: '../servidor/plasma/kit/verificakit',",
+                                            "        method:\"post\",",
+                                            "        params: {",
+                                            "            nombre: Ext.getCmp('txtNombreK').getValue(),",
+                                            "            casa: Ext.getCmp('cbCasaK').getValue()",
+                                            "",
+                                            "        },",
+                                            "        success: function( result, request ) {",
+                                            "            var responseData = Ext.JSON.decode(result.responseText);",
+                                            "            if(responseData.success){",
+                                            "                var values = forma.getValues();",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: '../servidor/plasma/kit/create',",
+                                            "                    method:\"post\",",
+                                            "                    params: {",
+                                            "                        data: Ext.encode(values)",
+                                            "                    },",
+                                            "                    success: function( result, request ) {",
+                                            "                        var responseData = Ext.JSON.decode(result.responseText);",
+                                            "                        if(responseData.success)",
+                                            "                        {",
+                                            "",
+                                            "                            Ext.Msg.alert('Aviso','Se ha ingresado la información');",
+                                            "                            Ext.getCmp('cbCasaK').setValue(null);",
+                                            "                            Ext.getCmp('txtNombreK').setValue(null);",
+                                            "                            Ext.getCmp('cbEstadoK').setValue(null);",
+                                            "",
+                                            "",
+                                            "                            Ext.getCmp('cbCasaK').reset();",
+                                            "                            Ext.getCmp('txtNombreK').reset();",
+                                            "                            Ext.getCmp('cbEstadoK').reset();",
+                                            "",
+                                            "                            store.load();",
+                                            "                            Ext.getCmp('wndKit').close();",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "                        }",
+                                            "                        else",
+                                            "                        {",
+                                            "                            Ext.Msg.alert('Alerta','Faltan datos');",
+                                            "                        }",
+                                            "                    },",
+                                            "",
+                                            "                    failure: function(response, opts) {",
+                                            "                        console.log('server-side failure with status code ' + response.status);",
+                                            "                    }",
+                                            "                });",
+                                            "            }",
+                                            "            else{",
+                                            "                Ext.Msg.alert('Atención','El kit con la casa comercial seleccionada ya existe');",
+                                            "            }",
+                                            "        }",
+                                            "    });",
+                                            "}",
+                                            "else",
+                                            "{",
+                                            "    Ext.Msg.alert('Atención','Los datos son incorrectos o se encuentran incompletos');",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnCrearKitClick",
+                                    "designerId": "7b9c8273-e2d4-449b-b2d8-73718617a78d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnRegresarKit",
+                                "layout|flex": null,
+                                "text": "Atrás"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton20",
+                            "designerId": "36783e79-fc8d-4f03-be9d-a415811846d4",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnRegresarKitClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('wndKit').close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnRegresarKitClick",
+                                    "designerId": "6dc4b30a-8d48-47b4-bbe2-1b5020b8e569"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFill7",
+                            "designerId": "ec4fe341-36cc-4d24-a50a-78419a0213a2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

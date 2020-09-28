@@ -1,0 +1,732 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "vwprtprincipal",
+        "designer|userClassName": "vwprtPrincipal",
+        "height": 250,
+        "layout": "border",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto"
+    },
+    "name": "MyViewport",
+    "designerId": "3e543e58-f02e-43a9-bf82-7d1be78128ba",
+    "viewControllerInstanceId": "0b1d5d08-28ae-4279-ba52-7b605b0f92f4",
+    "viewModelInstanceId": "9b351862-256a-43f3-b83f-838f8cbdf3cf",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "border",
+                "layout|region": "center",
+                "title": ""
+            },
+            "configAlternates": {
+                "layout": "string",
+                "layout|region": "string",
+                "title": "string"
+            },
+            "name": "MyPanel1",
+            "designerId": "cf220a0a-d0ac-4086-8692-c119d1d3ea76",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pnlCentral",
+                        "layout": "fit",
+                        "layout|region": "center",
+                        "title": ""
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|region": "string",
+                        "title": "string",
+                        "layout": "string"
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "958d32ee-4184-4add-aad6-891b5bca9435"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 70,
+                        "layout": "fit",
+                        "layout|region": "north",
+                        "title": ""
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout": "string",
+                        "layout|region": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "4d70cd0a-4099-416c-8de1-3e6900f4c276"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "layout": "vbox",
+                "layout|region": "west",
+                "title": "",
+                "width": 215
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "title": "string",
+                "width": "auto"
+            },
+            "name": "MyPanel5",
+            "designerId": "e3d6071d-12bd-4f4d-9e0d-a82ce738e0fe",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<center><img src=\"../servidor/img/logopuce2.jpg\" width=\"197\" height=\"63\"> </center>",
+                        "title": ""
+                    },
+                    "configAlternates": {
+                        "html": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "bc34c510-979e-40af-b5f9-416202d68407"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<center><img src=\"../servidor/img/ciseal1.jpg\" width=\"210\" height=\"105\"> </center>"
+                    },
+                    "configAlternates": {
+                        "html": "string"
+                    },
+                    "name": "MyPanel9",
+                    "designerId": "6d67ce05-eb67-4b6c-a9b6-e7f05710630f"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": ""
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "1b7f54cd-ac3f-4f5d-b17d-c05f1ebe8e7e",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Menu",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "floating": false,
+                                "plain": true
+                            },
+                            "configAlternates": {
+                                "floating": "boolean",
+                                "plain": "boolean"
+                            },
+                            "name": "MyMenu",
+                            "designerId": "465c3e31-2a2f-437f-a80c-44158f08c9f9",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuUsuarios",
+                                        "text": "Usuarios"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem7",
+                                    "designerId": "46ad41aa-82ff-4146-bd16-82fa6f3cee0f",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuUsuariosClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlUsuarios'))",
+                                                    "{",
+                                                    "    Ext.getCmp('pnlCentral').removeAll();",
+                                                    "    var win = Ext.create('plasma.view.pnlUsuarios');",
+                                                    "    this.getView().down('#pnlCentral').add(win);",
+                                                    "    win.show();",
+                                                    "    var strUsuario = Ext.getStore('Usuario');",
+                                                    "    strUsuario.removeAll();",
+                                                    "    strUsuario.load();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onMenuUsuariosClick",
+                                            "designerId": "68c1de87-7879-4df0-835b-ac17cddafe87"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuInstitucion",
+                                        "text": "Institución"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem",
+                                    "designerId": "c6f8aece-1a4b-4ce2-b22f-d5efca267123",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuInstitucionClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlInstitucion'))",
+                                                    "{",
+                                                    "    Ext.getCmp('pnlCentral').removeAll();",
+                                                    "    var win = Ext.create('plasma.view.pnlInstitucion');",
+                                                    "    this.getView().down('#pnlCentral').add(win);",
+                                                    "    win.show();",
+                                                    "    var strInstitucion = Ext.getStore('Institucion');",
+                                                    "    strInstitucion.removeAll();",
+                                                    "    strInstitucion.proxy.extraParams={",
+                                                    "       ",
+                                                    "    };",
+                                                    "    strInstitucion.load();",
+                                                    "    ",
+                                                    "   ",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onMenuInstitucionClick",
+                                            "designerId": "b0ca4763-b8ac-4501-81e3-6c3cd88d68b0"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuMarcador",
+                                        "text": "Marcador Serológico"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem1",
+                                    "designerId": "392da3b1-f46d-430d-a185-832dbd8e5469",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuMarcadorClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlMarcador'))",
+                                                    "{",
+                                                    "    Ext.getCmp('pnlCentral').removeAll();",
+                                                    "    var win = Ext.create('plasma.view.pnlMarcador');",
+                                                    "    this.getView().down('#pnlCentral').add(win);",
+                                                    "    win.show();",
+                                                    "    var strMarcador = Ext.getStore('Marcador');",
+                                                    "    strMarcador.removeAll();",
+                                                    "",
+                                                    "    strMarcador.load();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onMenuMarcadorClick",
+                                            "designerId": "54be00f9-bfe9-44d3-8c92-40945a10c909"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuKit",
+                                        "text": "Kit"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem2",
+                                    "designerId": "7a88a16a-18e8-4161-8fdb-2a628b9f2835",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuKitClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlKit'))",
+                                                    "{",
+                                                    "    Ext.getCmp('pnlCentral').removeAll();",
+                                                    "    var win = Ext.create('plasma.view.pnlKit');",
+                                                    "    this.getView().down('#pnlCentral').add(win);",
+                                                    "    win.show();",
+                                                    "    var strKit = Ext.getStore('Kit');",
+                                                    "    strKit.removeAll();",
+                                                    "    ",
+                                                    "    strKit.load();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onMenuKitClick",
+                                            "designerId": "c61fdb57-7603-4d3c-86ae-200f5a648dd3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuCodigo",
+                                        "text": "Código de Mapa (Serología)"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem3",
+                                    "designerId": "9d6d03c5-462e-4a97-8719-bb15619b2c07",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuCodigoClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlCodigo'))",
+                                                    "{",
+                                                    "    Ext.getCmp('pnlCentral').removeAll();",
+                                                    "    var win = Ext.create('plasma.view.pnlCodigo');",
+                                                    "    this.getView().down('#pnlCentral').add(win);",
+                                                    "    win.show();",
+                                                    "    var strCodigo = Ext.getStore('Codigo');",
+                                                    "    strCodigo.removeAll();",
+                                                    "    ",
+                                                    "    strCodigo.load();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "name": "string",
+                                                "scope": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "onMenuCodigoClick",
+                                            "designerId": "92830e03-5dbd-4412-8d51-4c3f1e2025af"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuMuestras",
+                                        "text": "Muestras"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem4",
+                                    "designerId": "e7c2792a-f8c7-4806-a3e2-9bd8b55acaf1",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuMuestrasClick",
+                                                "implHandler": [
+                                                    "if(!Ext.getCmp('pnlMuestras'))",
+                                                    "{",
+                                                    "    Ext.getCmp('pnlCentral').removeAll();",
+                                                    "    var win = Ext.create('plasma.view.pnlMuestras');",
+                                                    "    this.getView().down('#pnlCentral').add(win);",
+                                                    "    win.show();",
+                                                    "    var strMuestra = Ext.getStore('Muestra');",
+                                                    "    strMuestra.removeAll();",
+                                                    "",
+                                                    "    strMuestra.load();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "name": "string",
+                                                "scope": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "onMenuMuestrasClick",
+                                            "designerId": "838e89d8-4225-48f0-b68e-27422b82ba40"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuReporte",
+                                        "text": "Reporte"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem5",
+                                    "designerId": "174df01d-71a9-4c00-9754-d4d1fce48c63",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuReporteClick",
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onMenuReporteClick",
+                                            "designerId": "31f907df-c348-4472-9ea8-5cc0dc0fd889"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Separator",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Menu Item"
+                                    },
+                                    "configAlternates": {
+                                        "text": "string"
+                                    },
+                                    "name": "MySeparator",
+                                    "designerId": "1f9fb1bd-d1e0-46b7-9015-dda25379cfa2"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "menuSalir",
+                                        "text": "Salir"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyMenuItem6",
+                                    "designerId": "c76e3a0b-f6f6-4bf7-9605-674a4ac560fa",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMenuSalirClick",
+                                                "implHandler": [
+                                                    "var viewMain = this;",
+                                                    "    Ext.Ajax.request",
+                                                    "    (",
+                                                    "    {",
+                                                    "      url: '../servidor/login/logout',",
+                                                    "      success:function(response,options)",
+                                                    "      {",
+                                                    "        var responseData = Ext.JSON.decode(response.responseText);",
+                                                    "        if(responseData.success)",
+                                                    "        {",
+                                                    "          viewMain.getView().destroy();",
+                                                    "          Ext.create('plasma.view.vwprtLogin', {renderTo: Ext.getBody()});",
+                                                    "        }",
+                                                    "      }",
+                                                    "    }",
+                                                    "    );"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onMenuSalirClick",
+                                            "designerId": "0cba2722-7f0c-444b-8810-dfeea3e36e67"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyStyle": "background-color: #60A2DE",
+                "height": 30,
+                "layout": "border",
+                "layout|region": "south",
+                "title": ""
+            },
+            "configAlternates": {
+                "bodyStyle": "string",
+                "height": "auto",
+                "layout": "string",
+                "layout|region": "string",
+                "title": "string"
+            },
+            "name": "MyPanel8",
+            "designerId": "b79a2131-13f5-4766-82c2-5eddefafaa99",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "idUsuario",
+                        "layout|region": "west",
+                        "margin": "4 0 0 30",
+                        "style": "font-size: 14px; color: white",
+                        "width": 320
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|region": "string",
+                        "margin": "auto",
+                        "style": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyLabel1",
+                    "designerId": "65c71e1e-a56b-4f86-ae4d-a432c66a0790"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|region": "east",
+                        "margin": "3 0 0 0",
+                        "style": "fontFamily : Georgia; font-style: italic; font-size: 14px; color: white",
+                        "text": "Desarrollado por la Dirección Informática | PUCE",
+                        "width": 370
+                    },
+                    "configAlternates": {
+                        "layout|region": "string",
+                        "margin": "auto",
+                        "style": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyLabel2",
+                    "designerId": "91547852-86b6-44c0-8930-5b9e643b7b76"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportAfterRender",
+                "implHandler": [
+                    "ME = this;"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onViewportAfterRender",
+            "designerId": "b4cc027c-2a79-42c8-9d12-c5bbbf88ef9f"
+        }
+    ]
+}
